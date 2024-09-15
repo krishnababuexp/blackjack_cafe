@@ -9,6 +9,7 @@ const CatogeryCreate = () => {
 
   const { user } = useAuth();
   const { data, isLoading, refetch } = useGET("catogery/list/");
+  console.log(data);
 
   // Handle category input change
   const handleInputChange = (event) => {
@@ -24,7 +25,7 @@ const CatogeryCreate = () => {
 
     try {
       const response = await fetch(
-        "https://cafe.pythonanywhere.com/catogery/create/",
+        "https://cafe-app-meu8i.ondigitalocean.app/catogery/create/",
         {
           method: "POST",
           headers: {
@@ -63,7 +64,7 @@ const CatogeryCreate = () => {
 
     try {
       const response = await fetch(
-        `https://cafe.pythonanywhere.com/catogery/update/${id}/`,
+        `https://cafe-app-meu8i.ondigitalocean.app/catogery/update/${id}/`,
         {
           method: "PUT",
           headers: {
@@ -91,7 +92,7 @@ const CatogeryCreate = () => {
   const handleDelete = async (id) => {
     try {
       const response = await fetch(
-        `https://cafe.pythonanywhere.com/catogery/delete/${id}/`,
+        `https://cafe-app-meu8i.ondigitalocean.app/catogery/delete/${id}/`,
         {
           method: "DELETE",
           headers: {
