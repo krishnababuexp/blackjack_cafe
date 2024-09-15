@@ -38,8 +38,8 @@ const ProductCreate = () => {
 
     try {
       const url = editingProductId
-        ? `https://cafe.pythonanywhere.com/product/update/${editingProductId}/`
-        : "https://cafe.pythonanywhere.com/product/create/";
+        ? `https://cafe-app-meu8i.ondigitalocean.app/product/update/${editingProductId}/`
+        : "https://cafe-app-meu8i.ondigitalocean.app/product/create/";
 
       const method = editingProductId ? "PUT" : "POST";
 
@@ -103,7 +103,7 @@ const ProductCreate = () => {
     if (window.confirm("Are you sure you want to delete this product?")) {
       try {
         const response = await fetch(
-          `https://cafe.pythonanywhere.com/product/delete/${productId}/`,
+          `https://cafe-app-meu8i.ondigitalocean.app/product/delete/${productId}/`,
           {
             method: "DELETE",
             headers: {

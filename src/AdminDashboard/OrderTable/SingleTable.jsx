@@ -57,7 +57,7 @@ const SingleTable = () => {
 
     try {
       const response = await fetch(
-        "https://cafe.pythonanywhere.com/order/create/",
+        "https://cafe-app-meu8i.ondigitalocean.app/order/create/",
         {
           method: "POST",
           headers: {
@@ -97,7 +97,7 @@ const SingleTable = () => {
 
     try {
       const response = await fetch(
-        `https://cafe.pythonanywhere.com/order-item-update/${id}/${existingOrder.order_number}/${existingOrder.order_item[0].id}/`,
+        `https://cafe-app-meu8i.ondigitalocean.app/order-item-update/${id}/${existingOrder.order_number}/${existingOrder.order_item[0].id}/`,
         {
           method: "PUT",
           headers: {
@@ -125,7 +125,7 @@ const SingleTable = () => {
   const handleDeleteItem = async (orderNumber, itemId) => {
     try {
       const response = await fetch(
-        `https://cafe.pythonanywhere.com/ordered-item-delete/${orderNumber}/${itemId}/`,
+        `https://cafe-app-meu8i.ondigitalocean.app/ordered-item-delete/${orderNumber}/${itemId}/`,
         {
           method: "DELETE",
           headers: {
@@ -179,7 +179,7 @@ const SingleTable = () => {
 
     try {
       const response = await fetch(
-        `https://cafe.pythonanywhere.com/order-item-update/${id}/${orderNumber}/${itemId}/`,
+        `https://cafe-app-meu8i.ondigitalocean.app/order-item-update/${id}/${orderNumber}/${itemId}/`,
         {
           method: "PUT",
           headers: {
@@ -213,7 +213,7 @@ const SingleTable = () => {
       const orderId = tableOrders[0].id;
       try {
         const response = await fetch(
-          "https://cafe.pythonanywhere.com/bill/create/",
+          "https://cafe-app-meu8i.ondigitalocean.app/bill/create/",
           {
             method: "POST",
             headers: {

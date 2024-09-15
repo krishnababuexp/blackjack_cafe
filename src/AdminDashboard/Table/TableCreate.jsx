@@ -26,8 +26,8 @@ const TableCreate = () => {
 
     try {
       const url = editMode
-        ? `https://cafe.pythonanywhere.com/table/update/${currentTableId}/`
-        : "https://cafe.pythonanywhere.com/table/create/";
+        ? `https://cafe-app-meu8i.ondigitalocean.app/${currentTableId}/`
+        : "https://cafe-app-meu8i.ondigitalocean.app/table/create/";
 
       const method = editMode ? "PUT" : "POST";
 
@@ -79,7 +79,7 @@ const TableCreate = () => {
     if (window.confirm("Are you sure you want to delete this table?")) {
       try {
         const response = await fetch(
-          `https://cafe.pythonanywhere.com/table/delete/${tableId}/`,
+          `https://cafe-app-meu8i.ondigitalocean.app/table/delete/${tableId}/`,
           {
             method: "DELETE",
             headers: {
