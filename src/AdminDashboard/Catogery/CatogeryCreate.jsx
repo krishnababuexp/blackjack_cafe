@@ -114,7 +114,7 @@ const CatogeryCreate = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center h-auto p-4 bg-gray-100">
       <div className="bg-white p-6 rounded shadow-md w-full max-w-lg">
         <h2 className="text-xl font-bold mb-4 text-center">Create Category</h2>
         <input
@@ -170,7 +170,7 @@ const CatogeryCreate = () => {
                       category.name
                     )}
                   </td>
-                  <td className="py-2 px-4 border-b">
+                  <td className="py-2 flex px-4 border-b">
                     {editMode === category.id ? (
                       <button
                         onClick={() => handleSave(category.id)}
